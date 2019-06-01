@@ -24,9 +24,14 @@ class Album extends Component {
 
         album: album,
         currentSong: album.songs[0],
-        isPlaying: false
+        isPlaying: false,
 
+        hover: false
     };
+
+    toggleHover() {
+	this.setState({hover: !this.state.hover})
+}
 
 
   this.audioElement = document.createElement('audio');
@@ -59,9 +64,26 @@ if (this.state.isPlaying && isSameSong) {
   }
 }
 
+var onHover = null;
+var showPlay = false;
+
+onHover: function() {
+        this.setState({ showPlay: true });
+    },
+
+
   render() {
 
     return (
+
+      return(
+
+
+      <div>
+            <span className="playButton">
+                <img src="" height="" width="" onClick={this.onClick} onmouseover={this.onHover} />
+            </span>
+
 
       <section className="album">
 
@@ -80,8 +102,6 @@ if (this.state.isPlaying && isSameSong) {
            </div>
 
          </section>
-
-
 
       <table id="song-list">
 
@@ -133,7 +153,6 @@ if (this.state.isPlaying && isSameSong) {
   }
 
 }
-
 
 
 export default Album;
