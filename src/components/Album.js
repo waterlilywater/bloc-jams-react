@@ -80,9 +80,7 @@ onHover: function() {
 
 
       <div>
-            <span className="playButton">
-                <img src="" height="" width="" onClick={this.onClick} onmouseover={this.onHover} />
-            </span>
+            <span className="icon ion-md-play"></span>
 
 
       <section className="album">
