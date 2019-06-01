@@ -65,7 +65,7 @@ hoverOn (song) {
      this.setState ({hover: song});
 }
 
-hoverOff (song) {
+hoverOff () {
     this.setState ({hover: null});
 }
 
@@ -109,7 +109,9 @@ hoverOff (song) {
 
             {this.state.album.songs.map( (song, index) =>
 
-              <tr className="song" key={index} onClick={() => this.handleSongClick(song)}>
+              <tr className="song" key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.hoverOn(song)}>
+
+              <tr className="song" key={index} onClick={() => this.handleSongClick()} onMouseLeave={() => this.hoverOff()}>
 
                 <td className="song-actions">
 
