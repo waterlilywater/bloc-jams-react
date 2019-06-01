@@ -69,12 +69,14 @@ hoverOff () {
     this.setState ({hover: null});
 }
 
-displayIcon (song, index) {
-     if (this.state.currentSong === song && this.state.isPlaying){
-       return <span className="icon ion-md-pause"></span>
-    } else (this.state.currentSong !== song && this.state.isPlaying){
-       return <span className="icon ion-md-play"></span>
-
+displayIcon (song, i) {
+  const isSameSong = this.state.currentSong === song;
+    if ((this.state.hover === song && !isSameSong) || (!this.state.isPlaying && isSameSong)) {
+      return <span className='ion-md-play'></span>
+    } else if (this.state.isPlaying && isSameSong) {
+      return <span className='ion-md-pause'></span>
+    } else {
+      return i + 1;
     }
   }
 
@@ -123,7 +125,7 @@ displayIcon (song, index) {
 
                   <button>
 
-                    <span className="song-number">{index+1}</span>
+                    <span className="song-number">{this.displayIcon(song, index)}</span>
 
                     <span className="ion-play"></span>
 
