@@ -29,9 +29,6 @@ class Album extends Component {
         hover: false
     };
 
-    toggleHover() {
-	this.setState({hover: !this.state.hover})
-}
 
 
   this.audioElement = document.createElement('audio');
@@ -64,23 +61,15 @@ if (this.state.isPlaying && isSameSong) {
   }
 }
 
-var onHover = null;
-var showPlay = false;
+hoverOn (song) {
+     this.setState ({hover: song});
+}
 
-onHover: function() {
-        this.setState({ showPlay: true });
-    },
 
 
   render() {
 
     return (
-
-      return(
-
-
-      <div>
-            <span className="icon ion-md-play"></span>
 
 
       <section className="album">
@@ -131,6 +120,8 @@ onHover: function() {
                   </button>
 
                 </td>
+
+                <tr className="song" key={index} onClick={() => this.handleSongClick(song)}  onMouseEnter={ //add code here } onMouseLeave={// add code here }>
 
                 <td className="song-title">{song.title}</td>
 
