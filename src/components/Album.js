@@ -65,6 +65,10 @@ hoverOn (song) {
      this.setState ({hover: song});
 }
 
+hoverOff (song) {
+    this.setState ({hover: null});
+}
+
 
 
   render() {
