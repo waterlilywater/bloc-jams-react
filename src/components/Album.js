@@ -69,7 +69,14 @@ hoverOff () {
     this.setState ({hover: null});
 }
 
+displayIcon (song, index) {
+     if (this.state.currentSong === song && this.state.isPlaying){
+       return <span className="icon ion-md-pause"></span>
+    } else (this.state.currentSong !== song && this.state.isPlaying){
+       return <span className="icon ion-md-play"></span>
 
+    }
+  }
 
   render() {
 
@@ -109,9 +116,8 @@ hoverOff () {
 
             {this.state.album.songs.map( (song, index) =>
 
-              <tr className="song" key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.hoverOn(song)}>
-
-              <tr className="song" key={index} onClick={() => this.handleSongClick()} onMouseLeave={() => this.hoverOff()}>
+              <tr className="song" key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.hoverOn(song)}
+              onMouseLeave={() => this.hoverOff()}>
 
                 <td className="song-actions">
 
