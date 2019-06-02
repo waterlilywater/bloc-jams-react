@@ -80,8 +80,13 @@ displayIcon (song, i) {
     }
   }
 
-
-
+togglePlayPause(song, i) {
+              if (this.state.hover === song) {
+                  return <span className='ion-md-pause'></span>
+              } else {
+                  return <span className='ion-md-play'></span>
+              }
+          }
 
   render() {
 
