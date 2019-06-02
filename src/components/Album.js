@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import albumData from './../data/albums';
 
 
@@ -19,7 +18,6 @@ class Album extends Component {
     });
 
 
-
     this.state ={
 
         album: album,
@@ -36,6 +34,8 @@ class Album extends Component {
 
 }
 
+
+
 play() {
   this.audioElement.play();
   this.setState({ isPlaying: true });
@@ -51,15 +51,21 @@ setSong(song) {
   this.setState({ currentSong: song });
 }
 
+
 handleSongClick(song) {
   const isSameSong = this.state.currentSong === song;
+
+
 if (this.state.isPlaying && isSameSong) {
   this.pause();
+
+
 } else {
   if (!isSameSong) {this.setSong(song); }
   this.play();
   }
 }
+
 
 hoverOn (song) {
      this.setState ({hover: song});
@@ -68,6 +74,7 @@ hoverOn (song) {
 hoverOff () {
     this.setState ({hover: null});
 }
+
 
 displayIcon (song, i) {
   const isSameSong = this.state.currentSong === song;
@@ -126,11 +133,7 @@ displayIcon (song, i) {
 
                   <button>
 
-                    <span className="song-number">{this.displayIcon(song, index)}</span>
-
-                    <span className="ion-play"></span>
-
-                    <span className="ion-pause"></span>
+                    {this.displayIcon(song, index)}
 
                   </button>
 
