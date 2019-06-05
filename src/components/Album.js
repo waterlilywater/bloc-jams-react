@@ -50,14 +50,8 @@ componentDidMount() {
 }
 
 componentWillUnmount() {
-  this.audioElement.src = null;
-  this.audioElement = null;
-}
-
-componentWillUnmount() {
      this.audioElement.src = null;
-     this.audioElement.removeEventListener('timeupdate', this.eventListeners.timeupdate);
-     this.audioElement.removeEventListener('durationchange', this.eventListeners.durationchange);
+     this.audioElement = null;
    }
 
 play() {
@@ -133,7 +127,6 @@ displayIcon (song, i) {
      this.setState({ currentTime: newTime });
    }
 
-
   render() {
 
     return (
@@ -200,11 +193,11 @@ displayIcon (song, i) {
         <PlayerBar
          isPlaying={this.state.isPlaying}
          currentSong={this.state.currentSong}
+         currentTime={this.audioElement.currentTime}
+         duration={this.audioElement.duration}
          handleSongClick={() => this.handleSongClick(this.state.currentSong)}
          handlePrevClick={() => this.handlePrevClick()}
          handleNextClick={() => this.handleNextClick()}
-         currentTime={this.audioElement.currentTime}
-         duration={this.audioElement.duration}
          handleTimeChange={(e) => this.handleTimeChange(e)}
        />
         </section>
