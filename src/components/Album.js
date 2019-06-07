@@ -23,11 +23,13 @@ class Album extends Component {
   }
 
   formatTime(seconds) {
-var mins = parseInt(seconds/60);
-var secs = parseInt(seconds % 60);
-return mins + ":" + secs;
+        var mins = parseInt(seconds/60);
+        var secs = parseInt(seconds % 60);
+        if (secs >= 0 && secs < 10) {
+        return secs = 0 + secs;
+          }
+        return mins + ":" + secs;
 }
-
   componentDidMount() {
      this.eventListeners = {
        timeupdate: e => {
