@@ -8,15 +8,16 @@ import React, { Component } from 'react';
        <section className="player-bar">
          <section id="buttons">
            <button id="previous" onClick={this.props.handlePrevClick}>
-             <ion-icon className="ion-skip-backward"></ion-icon>
+             <span className="icon ion-md-skip-backward"></span>
            </button>
+
            <button id="play-pause" onClick={this.props.handleSongClick} >
-             <ion-icon name={this.props.isPlaying ? 'ion-pause' : 'ion-play'}></ion-icon>
-           </button>
+             <span className={this.props.isPlaying ? 'icon ion-md-pause' : 'icon ion-md-play'}></span>
            <button id="next" onClick={this.props.handleNextClick}>
-             <ion-icon className="ion-skip-forward"></ion-icon>
+             <span className="icon ion-md-skip-forward"></span>
            </button>
          </section>
+
          <section id="time-control">
            <div className="current-time">{this.props.currentTime}</div>
            <input
