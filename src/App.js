@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; //This imported object contains methods that I need in order to use React. The object is called the React library.
 import {Route, Link} from 'react-router-dom';
 import './App.css';
 import Landing from './components/Landing';
