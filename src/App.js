@@ -8,15 +8,17 @@ import Album from './components/Album';
 
 function App() {
   return (
-    <div className="App">
-      <header>
-      <nav>
-        <Link to='/'>Landing</Link>
-        <Link to='/library'>Library</Link>
-      </nav>
-        <h1>Bloc Jams</h1>
+    <div className="App container">
+      <header className="row">
+    	<div className="col-12">
+    		<h1>Bloc Jams</h1>
+    	</div>
+        <nav className="col-12">
+          <Link to='/'>Landing</Link>
+          <Link to='/library'>Library</Link>
+        </nav>
       </header>
-      <main>
+      <main className="row">
         <Route exact path="/" component={Landing} />
         <Route path="/library" component={Library} />
         <Route path="/album/:slug" component={Album} />

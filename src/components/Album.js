@@ -17,19 +17,23 @@ class Album extends Component {
       hover: false,
       currentVolume: 0.8
     };
-
     this.audioElement = document.createElement('audio');
     this.audioElement.src = album.songs[0].audioSrc;
   }
 
   formatTime(seconds) {
-        var mins = parseInt(seconds/60);
-        var secs = parseInt(seconds % 60);
-        if (secs >= 0 && secs < 10) {
-        secs = "0" + secs;
-          }
-        return mins + ":" + secs;
-}
+    if(typeof seconds !== "number") {
+      return "-:--";
+    }
+    else {
+      var mins = parseInt(seconds/60);
+      var secs = parseInt(seconds % 60);
+      if(secs < 10 && secs >= 0) {
+        secs = "0"+secs;
+      }
+      return mins + ":" + secs;
+    }
+  }
 
   componentDidMount() {
      this.eventListeners = {
@@ -45,7 +49,7 @@ class Album extends Component {
    }
 
    componentWillUnmount() {
-     this.audioElement.src = null; // setting the src to null means the song isn't playing anymore
+     this.audioElement.src = null;
      this.audioElement.removeEventListener('timeupdate', this.eventListeners.timeupdate);
      this.audioElement.removeEventListener('durationchange', this.eventListeners.durationchange);
    }
@@ -110,38 +114,44 @@ class Album extends Component {
     this.play();
   }
 
-
   handleTimeChange(e) {
      const newTime = this.audioElement.duration * e.target.value;
      this.audioElement.currentTime = newTime;
      this.setState({ currentTime: newTime });
    }
 
-
   handleVolumeChange(e) {
     const newVolume = e.target.value;
     this.audioElement.volume = newVolume;
-    this.setState({ currentVolume: newVolume })
+    this.setState({currentVolume: newVolume})
 
   }
 
   render() {
     return (
-      <section className="album">
-        <section id="album-info">
-          <img id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title} />
-          <div className="album-details">
-            <h1 id="album-title">{this.state.album.title}</h1>
-            <h2 className="artist">{this.state.album.artist}</h2>
-            <div id="release-info">{this.state.album.releaseInfo}</div>
+      <section className="album col-12">
+        <section id="album-info row">
+			<div className="row">
+              <div className="col-2"></div>
+              <div className="col-8">
+                  <img id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title} />
+              </div>
+              <div className="col-2"></div>
+			</div>
+          <div className="album-details row">
+            <h2 id="album-title">{this.state.album.title}</h2>
+            <h3 className="artist">{this.state.album.artist}</h3>
+            <p id="release-info">{this.state.album.releaseInfo}</p>
           </div>
         </section>
-        <table id="song-list">
-          <colgroup>
-            <col id="song-number-column" />
-            <col id="song-title-column" />
-            <col id="song-duration-column" />
-          </colgroup>
+        <table id="song-list row">
+          <thead>
+			<tr>
+            <th id="song-number-column">Song Number</th>
+            <th id="song-title-column">Title</th>
+            <th id="song-duration-column">Duration (in seconds)</th>
+			</tr>
+          </thead>
           <tbody>
             {this.state.album.songs.map((song, index) =>
               <tr className="song" key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.hoverOn(song)}
