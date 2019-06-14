@@ -1,13 +1,106 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*
+Colorscheme:
+
+Dark Violet: #2B2637;
+Dark Grape: #3C3547;
+Plum: #5F5265;
+Dark Slate Blue: #4A5569;
+Cream: #FCF2E6;
+
+Fontfaces:
+font-family: 'Lato', sans-serif;
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	clear: both;
+      width: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body {
+  background-color: #5F5265;
+  text-align: center;
+  color: #FCF2E6;
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+}
+
+h1{
+	font-size: 50px;
+}
+
+h2{
+	font-size: 45px;
+}
+
+h3{
+	font-size: 40px;
+}
+
+h4 {
+  font-size: 35px;
+}
+
+h5 {
+  font-size: 30px;
+}
+
+h6 {
+  font-size: 25px;
+}
+
+p{
+	font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #FCF2E6;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #FCF2E6;
+}
+
+header {
+    background: #3C3547;
+}
+
+header h1 {
+  text-align: left;
+}
+
+header nav {
+  text-align: right;
+  margin-top: 1.3em;
+}
+
+header nav a {
+    margin-left: 1em;
+    margin-right: 1em;
+
+}
+
+main.row {
+    min-height: 600px;
+}
+
+section.landing.col-12 {
+    padding: 0;
+}
+
+.landing h2 {
+  margin-bottom: 1em;
+  background-image: url(/assets/images/blurred_backgrounds/blur_bg_3.jpg);
+  height: 300px;
+  padding-top: 10%;
+}
+
+footer {
+  background: #2B2637;
+  height: 80px;
+  padding-top: 2.5%;
 }

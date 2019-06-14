@@ -1,6 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import React from 'react'; //This imported object contains methods that I need in order to use React. The object is called the React library.
+import ReactDOM from 'react-dom'; //The methods imported from 'react-dom' are meant for interacting with the DOM.
+import { BrowserRouter } from 'react-router-dom'; //
 import './index.css';
 import App from './App';
 

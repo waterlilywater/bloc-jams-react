@@ -10,12 +10,12 @@ function App() {
   return (
     <div className="App container">
       <header className="row">
-    	<div className="col-12">
+    	<div className="col-6">
     		<h1>Bloc Jams</h1>
     	</div>
-        <nav className="col-12">
-          <Link to='/'>Landing</Link>
-          <Link to='/library'>Library</Link>
+        <nav className="col-6">
+          <Link to='/'>Home</Link>
+          <Link to='/library'>Collection</Link>
         </nav>
       </header>
       <main className="row">
@@ -23,6 +23,9 @@ function App() {
         <Route path="/library" component={Library} />
         <Route path="/album/:slug" component={Album} />
       </main>
+      <footer className="row">
+        <p>Copyright 2019 Kawita Kandpal</p>
+      </footer>
     </div>
   );
 }
