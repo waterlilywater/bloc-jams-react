@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { famusic } from '@fortawesome/free-solid-svg-icons'
 
 const Landing = () => (
   <section className="landing col-12">
