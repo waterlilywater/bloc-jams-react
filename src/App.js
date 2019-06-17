@@ -8,7 +8,7 @@ import Album from './components/Album';
 
 function App() {
   return (
-    <div className="App container">
+    <div className="App">
       <header className="row">
     	<div className="col-6">
     		<h1>Bloc Jams</h1>

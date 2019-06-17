@@ -14,7 +14,7 @@ const Landing = () => (
         <p className="point-description">The world is full of music; why should you have to listen to music that someone else chose?</p>
       </div>
       <div className="point col-md-4 col-sm-12">
-        <i class="fas fa-stream"></i>
+        <i class="fas fa-headphones"></i>
         <h3 className="point-title">Unlimited Streaming, Ad-Free</h3>
         <p className="point-description">No arbitrary limits. No distractions.</p>
       </div>
