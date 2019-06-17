@@ -15,7 +15,6 @@ font-family: 'Lato', sans-serif;
 	margin: 0;
 	padding: 0;
 	clear: both;
-      width: 100%;
 }
 
 body {
@@ -103,4 +102,5 @@ footer {
   background: #2B2637;
   height: 80px;
   padding-top: 2.5%;
+	text-align: center;
 }
