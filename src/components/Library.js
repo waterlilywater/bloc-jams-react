@@ -14,9 +14,10 @@ class Library extends Component {
   render() {
     return (
       <section className="library col-12">
+        <h2>Collection</h2>
         {
           this.state.albums.map((album, index) =>
-            <div className="row">
+            <div className="row albumInfo">
               <Link to={`/album/${album.slug}`} key={index}>
                 <div className="col-lg-4 col-sm-12">
                   <img src={album.albumCover} alt={album.title} />

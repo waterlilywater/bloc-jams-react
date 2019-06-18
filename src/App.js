@@ -11,10 +11,10 @@ function App() {
     <div className="App">
       <header className="row">
     	<div className="col-6">
-    		<h1>Bloc Jams</h1>
+    		<h1><Link to='/'>Bloc Jams</Link></h1>
+
     	</div>
         <nav className="col-6">
-          <Link to='/'>Home</Link>
           <Link to='/library'>Collection</Link>
         </nav>
       </header>

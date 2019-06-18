@@ -131,6 +131,7 @@ class Album extends Component {
     return (
       <section className="album col-12">
         <section id="album-info row">
+        <h2 id="album-title">{this.state.album.title}</h2>
 			<div className="row">
               <div className="col-2"></div>
               <div className="col-8">
@@ -139,7 +140,6 @@ class Album extends Component {
               <div className="col-2"></div>
 			</div>
           <div className="album-details row">
-            <h2 id="album-title">{this.state.album.title}</h2>
             <h3 className="artist">{this.state.album.artist}</h3>
             <p id="release-info">{this.state.album.releaseInfo}</p>
           </div>

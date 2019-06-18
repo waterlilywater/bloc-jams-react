@@ -64,12 +64,19 @@ a:hover {
   color: #FCF2E6;
 }
 
+/*---------------------Header---------------------*/
+
 header {
     background: #3C3547;
 }
 
 header h1 {
   text-align: left;
+}
+
+header h1 a {
+    font-size: 50px;
+    margin-left: 1em;
 }
 
 header nav {
@@ -79,16 +86,30 @@ header nav {
 
 header nav a {
     margin-left: 1em;
-    margin-right: 1em;
+    margin-right: 50px;
 
 }
+
+/*---------------------Main---------------------*/
 
 main.row {
     min-height: 600px;
 }
 
+
+/*---------------------Landing Page View---------------------*/
+
+section.selling-points.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 section.landing.col-12 {
     padding: 0;
+}
+
+section.landing .point {
+    padding-left: 2em;
 }
 
 .landing h2 {
@@ -98,9 +119,62 @@ section.landing.col-12 {
   padding-top: 10%;
 }
 
+.fa-music {
+	margin-bottom: 1em;
+	font-size: 50px;
+}
+
+.fa-headphones{
+	margin-bottom: 1em;
+	font-size: 50px;
+}
+
+.fa-mobile-alt{
+	margin-bottom: 1em;
+	font-size: 50px;
+}
+
+/*---------------------Library Page View---------------------*/
+
+section.library.col-12 {
+    margin-top: 2em;
+}
+
+.albumInfo .col-lg-4, .albumInfo .col-lg-8 {
+    display: inline;
+}
+
+.albumInfo > a {
+    width: 80%;
+    margin-left: 10%;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #FCF2E6;
+}
+
+.albumInfo:first-of-type > a {
+	border-top: 1px solid #FCF2E6;
+}
+
+.albumInfo > a:hover {
+    text-decoration: none;
+    background-color: #4A5569;
+}
+
+.albumInfo img {
+    width: 150px;
+}
+
+/*---------------------Footer---------------------*/
+
 footer {
   background: #2B2637;
   height: 80px;
   padding-top: 2.5%;
 	text-align: center;
+}
+
+footer p {
+	width: 100%;
 }
