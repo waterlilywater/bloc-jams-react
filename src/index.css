@@ -166,6 +166,58 @@ section.library.col-12 {
     width: 150px;
 }
 
+
+/*---------------------Album Page View---------------------*/
+
+.row.albumImg, .row.album-details {
+    width: 100%;
+}
+
+h3.artist,
+p#release-info,
+h2#album-title,
+section.player-bar.row,
+section.player-bar.row > .row,
+.timeInfo.row {
+    width: 100%;
+    display: block;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #2B2637;
+    color: #FCF2E6;
+    background: #2B2637;
+    border-radius: 50px;
+}
+
+button:hover {
+    background-color: #4A5569;
+}
+
+table#song-list {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+tr.song, thead > tr {
+    height: 80px;
+    border-bottom: 1px solid #FCF2E6;
+}
+
+section.player-bar.row {
+    margin-top: 2em;
+		margin-bottom: 2em;
+}
+
+#volume-control div,
+#time-control div {
+    display: inline;
+}
+
+
 /*---------------------Footer---------------------*/
 
 footer {
@@ -177,4 +229,59 @@ footer {
 
 footer p {
 	width: 100%;
+}
+
+/*---------------------Media Queries---------------------*/
+
+@media screen and (max-width: 767px) {
+	header h1,
+	header nav {
+	    text-align: center;
+	}
+
+	header nav {
+    margin-top: 0.3em;
+		margin-bottom: 1em;
+	}
+
+	header nav a {
+		margin-right: 0;
+	}
+
+	.albumInfo img {
+    display: block;
+    margin: auto;
+	}
+
+	.albumInfo > a {
+		text-align: center;
+	}
+
+	img#album-cover-art {
+    width: 75%;
+	}
+
+	.row.albumImg, .row.album-details {
+    margin: 0;
+	}
+
+	table#song-list {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 0;
+	}
+
+	button#previous, button#play-pause, button#next {
+    width: 75%;
+    margin-left: 12.5%;
+    margin-bottom: 1em;
+	}
+
+	section#time-control, section#volume-control {
+    margin-left: 5%;
+	}
+
+	input.seek-bar {
+    width: 50%;
+	}
 }

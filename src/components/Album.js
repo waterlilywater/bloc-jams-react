@@ -130,9 +130,9 @@ class Album extends Component {
   render() {
     return (
       <section className="album col-12">
-        <section id="album-info row">
+        <section id="album-info" className="row">
         <h2 id="album-title">{this.state.album.title}</h2>
-			<div className="row">
+			<div className="row albumImg">
               <div className="col-2"></div>
               <div className="col-8">
                   <img id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title} />
@@ -144,12 +144,12 @@ class Album extends Component {
             <p id="release-info">{this.state.album.releaseInfo}</p>
           </div>
         </section>
-        <table id="song-list row">
+        <table id="song-list" className="">
           <thead>
 			<tr>
             <th id="song-number-column">Song Number</th>
             <th id="song-title-column">Title</th>
-            <th id="song-duration-column">Duration (in seconds)</th>
+            <th id="song-duration-column">Duration</th>
 			</tr>
           </thead>
           <tbody>
